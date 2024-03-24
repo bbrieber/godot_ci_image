@@ -2,11 +2,13 @@ name: 'Godot Build'
 description: 'Build a Godot Release'
 inputs:
   build-config:  # id of input
-    description: 'The Name of the Build COnfiguration'
+    description: 'The Name of the Build Configuration'
     required: true
     default: 'WindowsDesktop'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+##  image: 'Dockerfile'
+  image: 'docker://bbrieber/godot_ci_image:v4.2_2'
+  
   args:
     - ${{ inputs.build-config }}
