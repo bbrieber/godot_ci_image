@@ -7,8 +7,7 @@ inputs:
     default: 'WindowsDesktop'
 runs:
   using: 'docker'
-##  image: 'Dockerfile'
-  image: 'docker://ghcr.io/bbrieber/godot_ci_image:6fe1c56026b9e17e29471121acc1789b9c9af66d'
-  
+  image: 'Dockerfile'
+  #image: 'docker://ghcr.io/bbrieber/godot_ci_image:6fe1c56026b9e17e29471121acc1789b9c9af66d  
   args:
     - ${{ inputs.build-config }}
