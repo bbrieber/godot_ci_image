@@ -5,9 +5,19 @@ inputs:
     description: 'The Name of the Build Configuration'
     required: true
     default: 'WindowsDesktop'
+  export-type:  # id of input
+    description: 'The type of export [--export-release, --export-debug, --export-pack]'
+    required: false
+    default: '--export-release'
+  project-path:  # id of input
+    description: 'path to the project root relativ to the repository root(defaults to project)'
+    required: false
+    default: 'project'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   #image: 'docker://ghcr.io/bbrieber/godot_ci_image:6fe1c56026b9e17e29471121acc1789b9c9af66d  
   args:
     - ${{ inputs.build-config }}
+    - ${{ inputs.export-type }}
+    - ${{ inputs.project-path }}
