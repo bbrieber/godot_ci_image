@@ -16,7 +16,7 @@ inputs:
 runs:
   using: 'docker'
   #image: 'Dockerfile'
-  image: 'docker://ghcr.io/bbrieber/godot_ci_image:main  
+  image: 'docker://ghcr.io/bbrieber/godot_ci_image:main'
   args:
     - ${{ inputs.build-config }}
     - ${{ inputs.export-type }}
