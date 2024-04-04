@@ -1,7 +1,8 @@
-FROM ubuntu:22.04
+#FROM ubuntu:22.04
+FROM alpine
 
-RUN apt update && apt install -y wine unzip wget
-
+#RUN apt update && apt install -y wine unzip wget
+RUN apk add --no-cache wine unzip wget
 
 RUN mkdir -p /godot/releases && mkdir -p /godot/templates
 WORKDIR /godot 
