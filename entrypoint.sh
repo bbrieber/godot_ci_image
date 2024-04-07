@@ -3,6 +3,16 @@
 mkdir -p /github/home/.local/share/godot/export_templates/4.2.1.stable/
 cp -r /godot/templates/* /github/home/.local/share/godot/export_templates/4.2.1.stable/
 
+
+echo "1"
+echo $1
+
+echo "2"
+echo $2
+
+echo "3"
+echo $3
+
 echo "PROJECT"
 
 echo `ls /github/workspace/project`
