@@ -23,6 +23,8 @@ RUN cp -r /godot/templates/* /root/.local/share/godot/export_templates/
 
 COPY --chmod=770 /entrypoint.sh /godot/entrypoint.sh
 
+RUN chmod 777 /godot/Godot_v4.2.1-stable_linux.x86_64
+
 RUN ls -la /godot
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
