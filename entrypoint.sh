@@ -14,6 +14,12 @@ echo `ls /github/workspace`
 echo "Template Folder Source"
 echo `ls /godot/templates`
 
+
+
+
+echo "Godot Folder Source"
+echo `ls /godot`
+
 echo "Template Folder"
 echo `ls /github/home/.local/share/godot/export_templates/4.2.1.stable/`
 
