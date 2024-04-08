@@ -37,4 +37,5 @@ echo "/godot/Godot_v4.2.1-stable_linux.x86_64 --headless --path /github/workspac
 
 #/godot/Godot_v4.2.1-stable_linux.x86_64 --headless --path /github/workspace/$3 $2 $1
 #/godot/Godot_v4.2.1-stable_linux.x86_64 --headless --path /github/workspace/project --export-release $1
-/godot/Godot_v4.2.1-stable_linux.x86_64 --help
+
+sh /godot/Godot_v4.2.1-stable_linux.x86_64 --help
