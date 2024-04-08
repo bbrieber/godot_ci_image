@@ -1,8 +1,8 @@
-#FROM ubuntu:22.04
-FROM alpine
+FROM ubuntu:22.04
+#FROM alpine
 
-#RUN apt update && apt install -y wine unzip wget
-RUN apk add --no-cache wine unzip wget
+RUN apt update && apt install -y wine unzip wget
+#RUN apk add --no-cache wine unzip wget
 
 RUN mkdir -p /godot/releases && mkdir -p /godot/templates
 WORKDIR /godot 
@@ -23,9 +23,9 @@ RUN cp -r /godot/templates/* /root/.local/share/godot/export_templates/
 
 COPY --chmod=770 /entrypoint.sh /godot/entrypoint.sh
 
-RUN chmod 777 /godot/Godot_v4.2.1-stable_linux.x86_64
+#RUN chmod 777 /godot/Godot_v4.2.1-stable_linux.x86_64
 
-RUN ls -la /godot
+#RUN ls -la /godot
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/godot/entrypoint.sh"]
