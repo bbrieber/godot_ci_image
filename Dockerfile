@@ -7,10 +7,10 @@ WORKDIR /godot
 
 
 RUN wget --no-check-certificate -q https://github.com/godotengine/godot/releases/download/4.4.1-stable/godot-4.4.1-stable.tar.xz
-RUN wget --no-check-certificate -q https://github.com/godotengine/godot/releases/download/4.4.1-stable/godot-4.4.1-stable_export_templates.tpz 
+RUN wget --no-check-certificate -q https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz 
 
 RUN tar -xzf godot-4.4.1-stable.tar.xz
-RUN unzip godot-4.4.1-stable_export_templates.tpz -d /godot
+RUN unzip Godot_v4.4.1-stable_export_templates.tpz -d /godot
 
 RUN mkdir -p /root/.local/share/godot/export_templates/
 
