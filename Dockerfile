@@ -1,6 +1,6 @@
-FROM ubuntu:24.04
+FROM alpine:3.22
 
-RUN apt update && apt install -y wine unzip wget xz-utils
+RUN apk update && apk add --no-cache wine unzip wget
 
 RUN mkdir -p /godot/releases && mkdir -p /godot/templates
 WORKDIR /godot 
