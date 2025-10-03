@@ -20,8 +20,8 @@ RUN mkdir -p /root/.local/share/godot/export_templates/
 
 COPY --chmod=770 /entrypoint.sh /godot/entrypoint.sh
 
-COPY --from=build /godot/releases/* /godot
-COPY --from=build -r /godot/templates/* /root/.local/share/godot/export_templates/
+COPY --from=builder /godot/releases/* /godot
+COPY --from=builder -r /godot/templates/* /root/.local/share/godot/export_templates/
 
 
 ENTRYPOINT ["/godot/entrypoint.sh"]
