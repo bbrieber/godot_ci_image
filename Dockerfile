@@ -13,7 +13,8 @@ RUN unzip Godot_v4.5-stable_export_templates.tpz -d /godot
 
 FROM ubuntu:24.04
 
-RUN apk add --no-cache wine
+#RUN apk add --no-cache wine
+RUN apt update && apt install -y wine
 
 RUN mkdir -p /godot
 RUN mkdir -p /root/.local/share/godot/export_templates/
