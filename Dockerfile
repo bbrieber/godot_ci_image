@@ -1,4 +1,4 @@
-ARG GODOT_VERSION=4.5
+ARG GODOT_VERSION="4.5"
 
 FROM alpine:3.22 as builder
 
