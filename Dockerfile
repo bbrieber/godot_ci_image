@@ -11,7 +11,7 @@ RUN wget --no-check-certificate -q https://github.com/godotengine/godot/releases
 RUN unzip Godot_v4.5-stable_linux.x86_64.zip -d /godot/releases
 RUN unzip Godot_v4.5-stable_export_templates.tpz -d /godot
 
-FROM ubuntu:24.4
+FROM ubuntu:24.04
 
 RUN apk add --no-cache wine
 
