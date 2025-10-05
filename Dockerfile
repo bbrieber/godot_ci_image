@@ -1,5 +1,6 @@
 ARG GODOT_VERSION="4.5"
 
+LABEL org.opencontainers.image.description "Build image for Godot projects"
 FROM alpine:3.22 as builder
 
 ARG GODOT_VERSION
