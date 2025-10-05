@@ -21,12 +21,12 @@ LABEL org.opencontainers.image.description "Build image for Godot projects"
 RUN apt update && apt install -y wine
 
 RUN mkdir -p /godot
-RUN mkdir -p /home/github/.local/share/godot/export_templates/v${GODOT_VERSION}.stable
+RUN mkdir -p /home/github/.local/share/godot/export_templates/${GODOT_VERSION}.stable
 
 COPY --chmod=770 /entrypoint.sh /godot/entrypoint.sh
 
 COPY --from=builder /godot/releases/* /godot
-COPY --from=builder /godot/templates /home/github/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+COPY --from=builder /godot/template/* /home/github/.local/share/godot/export_templates/${GODOT_VERSION}.stable
 
 
 ENTRYPOINT ["/godot/entrypoint.sh"]
