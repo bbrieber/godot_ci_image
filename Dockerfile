@@ -17,12 +17,12 @@ FROM ubuntu:24.04
 RUN apt update && apt install -y wine
 
 RUN mkdir -p /godot
-RUN mkdir -p /home/github/.local/share/godot/export_templates/v4.5-stable
+RUN mkdir -p /home/github/.local/share/godot/export_templates/v4.5.stable
 
 COPY --chmod=770 /entrypoint.sh /godot/entrypoint.sh
 
 COPY --from=builder /godot/releases/* /godot
-COPY --from=builder /godot/templates /home/github/.local/share/godot/export_templates/v4.5-stable
+COPY --from=builder /godot/templates /home/github/.local/share/godot/export_templates/v4.5.stable
 
 
 ENTRYPOINT ["/godot/entrypoint.sh"]
