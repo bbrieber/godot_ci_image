@@ -26,7 +26,7 @@ RUN mkdir -p /home/github/.local/share/godot/export_templates/${GODOT_VERSION}.s
 COPY --chmod=770 /entrypoint.sh /godot/entrypoint.sh
 
 COPY --from=builder /godot/releases/* /godot
-COPY --from=builder /godot/template/* /home/github/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+COPY --from=builder /godot/templates/* /home/github/.local/share/godot/export_templates/${GODOT_VERSION}.stable
 
 
 ENTRYPOINT ["/godot/entrypoint.sh"]
